@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>IRIS FLOWER CLASSIFICATION</h1>
+        <style>
+            body {
+                background-image: url(iris.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+           
+            form {
+                align-self:auto;
+                width: 550px;
+                height: 350px;
+                padding: 5px;
+                margin: auto;
+                border-radius: 1px black;
+                background-color:rgb(207, 128, 238);
+                align-content:center;
+
+            }  
+            
+            
+        
+            h1{text-align:center;
+                text-shadow: 0px;
+                text-size-adjust:0px;
+                color: white;
+                font-size: 40px;
+        
+            }
+            H2 {
+                size: 15px;
+                color: white;
+            }
+            
+        </style>
+        
+            
+           
+            
+    </head>
+
+    <body>
+        <form action="{{ url_for('predict')}}" method="post" >
+            <table>
+            <h2>ENTER THE RESPECTIVE VALUES IN </h2>
+            <h2>BETWEEN 0 AND 9.</h2>
+                <tr>
+
+                    <td></td>
+                    <td>SEPAL LENGHT</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="sepal length" required ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>SEPAL WIDTH</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="sepal width" required ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+               
+                <tr>
+                    <td></td>
+                    <td>PETAL LENGHT</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="petal length" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>PETAL WIDTH</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="petal width" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    
+                    <TD><input type="submit" value="PREDICT FLOWER"></TD>
+                </tr>
+                <tr>
+                    <td><h3>{{prediction_text}}</h3></td>
+
+                
+            </tr>
+            </table>
+        </form>
+    </body>
+
+</html>
